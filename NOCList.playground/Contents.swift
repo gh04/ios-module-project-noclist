@@ -98,12 +98,25 @@ print("\(findCleanAgents().count) clean agents out of \(nocList.count)")
 //: ## Step 7
 //: Create a function called "findHighRisk" that prints out the real names and access levels of agents with level 8 or higher. If one of these agents is also currently compromised, add `**WARNING** **COMPROMISED**` to the end of the string that includes their name and access level.
 //: - Example: `Jon Voight, level: 9 **WARNING** **COMPROMISED**`
-
+func findHighRisk() {
+    
+    for agents in nocList {
+        
+         if agents.accessLevel >= 8 && agents.compromised == true {
+           print("\(agents.realName), level: \(agents.accessLevel) **WARNING** **COMPROMISED**")
+       }
+        else if agents.accessLevel >= 8 {
+            print("\(agents.realName), level: \(agents.accessLevel)")
+        }
+        
+    }
+}
 
 
 //: ## Step 8
 //: Call the above function and check the output in the console to ensure it is functioning properly.
 
+findHighRisk()
 
 
 //: ## Step 9
