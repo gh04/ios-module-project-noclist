@@ -46,7 +46,7 @@ let frank = (coverName: "Frank Barnes", realName: "Dale Dye", accessLevel: 9, co
 
 //: ## Step 2
 //: Place the above constants inside an array. Declare this array as a constant as well.
-
+let nocList = [ethan, jim, claire, eugene, franz, luther, sarah, max, hannah, jack, frank]
 
 
 //: ## Step 3
