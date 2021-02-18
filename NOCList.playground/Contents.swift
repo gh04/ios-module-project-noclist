@@ -51,12 +51,25 @@ let nocList = [ethan, jim, claire, eugene, franz, luther, sarah, max, hannah, ja
 
 //: ## Step 3
 //: Create a function that calculates the total number of compromised agents. Inside the function, iterate over the array of agents to determine which ones are compromised. Return the total count.
-
+func compromisedAgents() -> Int {
+   
+    var total = 0
+    
+    for agents in nocList {
+        if agents.compromised == true {
+            total += 1
+        }
+        
+    }
+    return total
+}
 
 
 //: ## Step 4
 //: Call the above function to find the total number of compromised agents and then print a sentence that says "# agents have been compromised!" using string interpolation.
+let numberOfCompromised = compromisedAgents()
 
+print("\(numberOfCompromised) agents have been compromised")
 
 
 //: ## Step 5
